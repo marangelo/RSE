@@ -1,0 +1,40 @@
+alias sList="service  --status-all"
+alias sOn="service --status-all | grep '\[ + \]'"
+alias sOff="service --status-all | grep '\[ - \]'"
+alias Off="sudo shutdown -h now"
+alias check="sudo apt update; sudo apt upgrade"
+alias monitor="gnome-system-monitor"
+alias sDown="sudo systemctl stop apache2 mysql glances"
+alias sUp="sudo systemctl start apache2 mysql glances"
+alias onLinea="sudo nast -m -i wlp2s0"
+alias sai='sudo apt-get install'
+alias desinstalar='sudo apt-get remove'
+alias purgar='sudo apt-get --purge remove'
+alias sPaquete='apt-cache search'
+alias apagarMonitor='sleep 1 && xset dpms force off'
+alias dff='df -h -x tmpfs -x devpts -x usbfs'
+alias scanPuertos='sudo nmap -P0 -sT -F -O -A'
+alias empaquetar='tar -zcvf `date +%d-%m-%Y`.tar.gz'
+alias toWallpaper="mv -i *.jpg /home/marangelo/Pictures/Wallpapers"
+alias ginit="git init"
+alias gclone="git clone"
+alias hwww="cd /var/www/html/"
+alias sar="sudo apt remove"
+alias kubectl="minikube kubectl --"
+alias dps='sudo docker ps -a --format="table {{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.Command}}\t{{.Status}}"'
+alias dll='echo -e "\n **********CONTAINER************ \n " ; dps ; echo -e "\n **********VOLUME************ \n " ;sudo docker  volume ls; sudo echo -e "\n ***********IMAGEN********** \n " ;sudo docker images'
+
+alias dstop='sudo docker stop'
+alias dstart='sudo docker start'
+alias dlogs='sudo docker logs'
+alias sc="history | grep "
+alias lsps='ps -elf | grep'
+alias dup='docker-compose up -d'
+alias dexec='sudo docker exec -it'
+alias dkill='sudo docker kill $(sudo docker ps -q)'
+alias drm='sudo docker rm $(sudo docker ps -a -q)'
+alias drmi='sudo docker rmi $(sudo docker images -q)'
+alias drml='sudo docker volume rm $(sudo docker volume ls)'
+alias dpurge='drm ; drmi ; drml'
+alias mkctl="sudo microk8s kubectl"
+
